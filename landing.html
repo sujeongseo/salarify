@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=NanumSquareOTF&display=swap" rel="stylesheet" />
+    <link href="./style.css" rel="stylesheet" />
+    <title>내채공 해지 환급금 조회하기</title>
+    <script>
+        function showForgotModal(){
+            document.querySelector('#forgot-modal').style.display = 'block';
+        }
+
+        function offForgotModal(){
+            document.querySelector('#forgot-modal').style.display = 'none';
+        }
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+        if (event.target == document.querySelector('#forgot-modal')) {
+            document.querySelector('#forgot-modal').style.display = "none";
+        }
+        }
+    </script>
+</head>
+<body>
+<body>
+    <div class="v33_69">
+        <span class="slogan">샐러리파이<br>청년내일채움공제 동기부여 프로젝트</span>
+        <div class="maincopy">
+            <span class="v37_227">내<br>채<br>공</span>
+            <span class="v37_228">일<br>움<br>제</span>
+        </div>
+        <div class="image">
+            <img class="woman" src="./image/woman.png" alt="" />
+        </div>
+        <span class="v33_71">청년 내채공 해지시 환급금과<br>이자를 바로 확인해 보세요!</span>
+        <!-- <form class="form">
+            <div class="radio">
+                <span class="type">가입 유형</span>
+                <input type="radio" name="chk_type" value="2년형" checked="checked">2년형 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="chk_type" value="3년형">3년형
+            </div>
+            <div>
+                <span class="date">가입 일자</span>
+                <input type="date" class="inputbox" placeholder="내체공 가입 일자">
+            </div>
+            <div>
+                <span class="rounds">부금 회차</span>
+                <input type="number" min="0" max="36" />
+            </div>
+        </form> -->
+        
+        <div class="form">
+                <span class="type">가입 유형</span>
+                <div class="radio">
+                    <input type="radio" name="chk_type" value="2년형" checked="checked">2년형 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="chk_type" value="3년형">3년형
+                </div>
+                <span class="date">가입 일자</span>
+                <input type="date" class="inputbox" placeholder="내체공 가입 일자"></div>
+                <span class="rounds">부금 회차</span>
+                <div class="number" >
+                    <input type="number" min="0" max="36" id="input-deposits" placeholder="현재까지 부금 회차수"/>
+                </div>
+        </div>
+        <div class="forgot" onclick="showForgotModal()">기억이 안난다면?
+            <a href="##" target="blank"></a>
+        </div>
+        <div class="button" onclick="location.href='loading.html'">
+            <img src="./image/submit.png" alt="" />
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="forgot-modal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" onclick="offForgotModal()">&times;</span>
+      <span class="modal-number">방법 1</span>
+      <span class="modal-copy">카카오톡으로 확인하기</span>
+      <div class="modal-image">
+          <img src="./image/kakaotalk.png" alt="" />
+          <div class="modal-highlight"></div>
+      </div>
+      <span class="modal-description">(청년)내일채움공제 대화방에서<br>부금 회차수 확인 </span>
+    </div>
+  
+  </div>
+</body>
+</html>
