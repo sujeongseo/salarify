@@ -7,8 +7,10 @@ body {
   font-size: 14px;
 }
 .v33_69 {
-  width: 375px;
-  height: 812px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
   background: rgba(253,118,62,1);
   opacity: 1;
   position: absolute;
@@ -16,14 +18,18 @@ body {
   left: 0px;
   overflow: hidden;
 }
+
+
 .form {
+  text-align: center;
   width: 311px;
   height: 350px;
+  margin: auto;
   background: rgba(255,255,255,1);
   opacity: 1;
-  position: absolute;
-  top: 435px;
-  left: 32px;
+  position: relative;
+  top: 100px;
+  left: 0px;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   border-bottom-left-radius: 25px;
@@ -34,19 +40,20 @@ body {
 .button {
   width: 262px;
   height: 48px;
+  background-color: transparent;
+  color:transparent;
   /* background: url("../images/v37_171.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; */
   opacity: 1;
   position: absolute;
-  top: 717px;
-  left: 56px;
+  top: 276px;
+  left: 25px;
   overflow: hidden;
+  padding: 0;
 }
-.name {
-  color: #fff;
-}
+
 .v34_170 {
   width: 87px;
   color: rgba(255,255,255,1);
@@ -130,8 +137,8 @@ body {
   width: 100px;
   color: rgba(194,194,194,1);
   position: absolute;
-  top: 683px;
-  left: 137px;
+  top: 243px;
+  left: 95px;
   font-family: NanumSquareOTF;
   font-weight: Regular;
   font-size: 14px;
@@ -143,8 +150,8 @@ body {
   width: 55px;
   color: rgba(0,0,0,1);
   position: absolute;
-  top: 605px;
-  left: 56px;
+  top: 167px;
+  left: 24px;
   font-family: NanumSquareOTF;
   font-weight: Bold;
   font-size: 14px;
@@ -152,74 +159,94 @@ body {
   text-align: left;
 }
 .v33_71 {
-  width: 333px;
+  width: 100%;
   color: rgba(255,255,255,1);
   position: absolute;
-  top: 373px;
-  left: 21px;
+  top: 379px;
+  left: 0;
   font-family: NanumSquareOTF;
   font-weight: ExtraBold;
   font-size: 18px;
   opacity: 1;
   text-align: center;
 }
-.maincopy {
-  width: 139px;
-  height: 258px;
-  /* background: url("../images/v37_226.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover; */
-  opacity: 1;
-  position: absolute;
-  top: 95px;
-  left: 50px;
-  overflow: hidden;
-}
-.v37_227 {
-  width: 66px;
-  color: rgba(255,255,255,1);
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  font-family: NanumSquareOTF;
-  font-weight: ExtraBold;
-  font-size: 72px;
-  opacity: 1;
-  text-align: left;
-}
-.v37_228 {
-  width: 66px;
-  color: rgba(255,255,255,1);
-  position: absolute;
-  top: 0px;
-  left: 73px;
-  font-family: NanumSquareOTF;
-  font-weight: Regular;
-  font-size: 72px;
-  opacity: 1;
-  text-align: left;
-}
+
 .slogan {
-  width: 211px;
+  width: 100%;
   color: rgba(255,255,255,1);
   position: absolute;
   top: 39px;
-  left: 82px;
+  left: 0px;
   font-family: NanumSquareOTF;
   font-weight: ExtraBold;
   font-size: 14px;
   opacity: 1;
   text-align: center;
 }
+
+.main {
+  display: flex;
+  justify-content: center;
+  /* position: relative; */
+  margin-top: 10px;
+  height: 340px;
+  padding-right: 30%;
+  padding-left: 5%;
+  /* padding-left: 2%; */
+  text-align: center;
+  /* overflow: hidden; */
+
+}
+
+.maincopy {
+  width: 139px;
+  height: 258px;
+  opacity: 1;
+  position: relative;
+  top: 95px;
+  left: 4%;
+  text-align: center;
+  float: left;
+  margin-left: 14%;
+}
+
+.v37_227 {
+  width: 50%;
+  color: rgba(255,255,255,1);
+  /* position: absolute; */
+  top: 0px;
+  left: 0px;
+  font-family: NanumSquareOTF;
+  font-weight: ExtraBold;
+  font-size: 72px;
+  opacity: 1;
+  text-align: center;
+}
+
+ .v37_228 {
+  /* width: 50%; */
+  color: rgba(255,255,255,1);
+  /* position: absolute; */
+  /* left: 20px; */
+  font-family: NanumSquareOTF;
+  font-weight: Regular;
+  font-size: 72px;
+  opacity: 1;
+  text-align: center;
+}
+
 .woman {
   position: absolute;
+  float: right;
+  margin-right: 16%;
   width: 256px;
   height: 275.92px;
-  left: 123px;
-  top: 75.83px;
+  left: 47%;
+  top: 75px;
   transform: matrix(0, 0, 1, 0, 0);
+  text-align: center;
 }
+
 
 .v63_149 {
   width: 106px;
@@ -253,9 +280,9 @@ body {
   top: 8px;
   left: 6px;
 }
-.name {
+/* .name {
   color: #fff;
-}
+} */
 .v63_159 {
   width: 65px;
   height: 65px;
@@ -269,9 +296,9 @@ body {
   left: 35px;
   overflow: hidden;
 }
-.name {
+/* .name {
   color: #fff;
-}
+} */
 .v63_167 {
   width: 63px;
   height: 51px;
@@ -295,9 +322,9 @@ body {
   left: 10px;
   overflow: hidden;
 }
-.name {
+/* .name {
   color: #fff;
-}
+} */
 
 
 
@@ -311,22 +338,24 @@ body {
   font-size: 14px;
 }
 .v33_50 {
-  width: 375px;
-  height: 812px;
+  width: 100%;
+  height: 100%;
   background: rgba(255,255,255,1);
   opacity: 1;
   position: absolute;
   top: 0px;
   left: 0px;
   overflow: hidden;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .comment {
   width: 199px;
   color: rgba(34,31,31,1);
-  position: absolute;
+  position: relative;
   top: 140px;
-  left: 87px;
+  left: 50%;
   font-family: NanumSquareOTF;
   font-weight: ExtraBold;
   font-size: 14px;
@@ -339,7 +368,6 @@ body {
   opacity: 1;
   position: absolute;
   top: 210px;
-  left: 50px;
   overflow: hidden;
 }
 .cal {
@@ -347,7 +375,7 @@ body {
   color: rgba(34,31,31,1);
   position: absolute;
   top: 72px;
-  left: 104px;
+  left: 50%;
   font-family: NanumSquareOTF;
   font-weight: ExtraBold;
   font-size: 24px;
@@ -362,6 +390,7 @@ body {
   left: 50px;
   top: 210px;
   filter: drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.25));
+  text-align: center;
 }
 
 /* 이하 output  */
@@ -923,17 +952,19 @@ body {
   overflow: hidden;
 }
 .share {
-  width: 130px;
+  width: 138px;
   height: 48px;
-  background: url("../images/v97_1029.png");
+  /* background: url("../images/v97_1029.png");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
+  background-size: cover; */
   opacity: 1;
   position: absolute;
   top: 1322px;
   left: 207px;
   overflow: hidden;
+  border: 0;
+  outline: 0;
 }
 .logo {
   width: 90px;
@@ -949,13 +980,19 @@ body {
   overflow: hidden;
 }
 
+.info {
+  position: absolute;
+  left: 228px;
+  top: 1406px;
+}
+
 .number {
   /* Input / Text Input */
   position: absolute;
   width: 262px;
   height: 35px;
-  left: 56px;
-  top: 630px;
+  left: 24px;
+  top: 194px;
 
   /* White */
 
@@ -998,7 +1035,7 @@ body {
   /* border: 1px solid #888; */
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1), 0px 24px 48px rgba(0, 0, 0, 0.2);
   border-radius: 2px;
-  width: 90%; /* Could be more or less, depending on screen size */
+  width: 330px; /* Could be more or less, depending on screen size */
   height: 330px;
   left: 22px;
   top: 345px;
@@ -1007,6 +1044,7 @@ body {
   position: absolute;
   width: 70%;
   height: 42px;
+  top: 15px;
   left: 15%;
   text-align: center;
   color: rgba(253, 118, 62, 1);
@@ -1017,7 +1055,7 @@ body {
   position: absolute;
   width: 70%;
   height: 42px;
-  top: 12%;
+  top: 40px;
   left: 15%;
   text-align: center;
   color: rgba(253, 118, 62, 1);
@@ -1030,21 +1068,47 @@ body {
   position: absolute;
   width: 321px;
   height: 147.3px;
-  left: 26px;
-  top: 145px;
+  left: 0px;
+  top: 90px;
+  text-align: center;
+  margin: auto;
 }
 
-.modal-highlight {
+.modal-highlight_1 {
   position: absolute;
   width: 39px;
   height: 19px;
-  left: 155px;
-  top: 83px;
+  left: 139px;
+  top: 174px;
 
   border: 2px solid #FD763E;
   box-sizing: border-box;
   border-radius: 3px;
 }
+
+.modal-highlight_2 {
+  position: absolute;
+  width: 102px;
+  height: 19px;
+  left: 93px;
+  top: 123px;
+  border: 2px solid #FD763E;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.modal-highlight_3 {
+  position: absolute;
+  width: 59px;
+  height: 19px;
+  left: 215px;
+  top: 207px;
+  border: 2px solid #FD763E;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+
 
 .modal-description {
   position: absolute;
@@ -1075,4 +1139,153 @@ body {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.slide-button {
+  top: 100px;
+  margin-top: 250px;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 70%;
+  width: auto;
+  margin-top: 130px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  z-index: 1;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  top:200px;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.left-date {
+  width: 122px;
+  color: white;
+  position: absolute;
+  top: 70px;
+  left: 127px;
+  font-family: NanumSquareOTF;
+  font-weight: ExtraBold;
+  font-size: 44px;
+  opacity: 1;
+  text-align: center;
+}
+.result {
+  width: 120px;
+  color:white;
+  position: absolute;
+  top: 40px;
+  left: 128px;
+  font-family: NanumSquareOTF;
+  font-weight: Bold;
+  font-size: 18px;
+  opacity: 1;
+  text-align: center;
+}
+
+.heading {
+  text-align: center;
+  position: relative;
+}
+
+.back {
+  position: absolute;
+}
+
+.front {
+  position: absolute;
+}
+.space {
+  width: 100%;
+  height: 30px;
+  top: 100px;
+  margin: 100px 0;
+  background-color: black;
+  text-align: center;
 }

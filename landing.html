@@ -21,70 +21,153 @@
             document.querySelector('#forgot-modal').style.display = "none";
         }
         }
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        }
     </script>
 </head>
 <body>
     <div class="v33_69">
         <span class="slogan">샐러리파이<br>청년내일채움공제 동기부여 프로젝트</span>
-        <div class="maincopy">
-            <span class="v37_227">내<br>채<br>공</span>
-            <span class="v37_228">일<br>움<br>제</span>
-        </div>
-        <div class="image">
-            <img class="woman" src="./image/woman.png" alt="" />
-        </div>
-        <span class="v33_71">청년 내채공 해지시 환급금과<br>이자를 바로 확인해 보세요!</span>
-        <!-- <form class="form">
-            <div class="radio">
-                <span class="type">가입 유형</span>
-                <input type="radio" name="chk_type" value="2년형" checked="checked">2년형 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="radio" name="chk_type" value="3년형">3년형
-            </div>
-            <div>
-                <span class="date">가입 일자</span>
-                <input type="date" class="inputbox" placeholder="내체공 가입 일자">
-            </div>
-            <div>
-                <span class="rounds">부금 회차</span>
-                <input type="number" min="0" max="36" />
-            </div>
-        </form> -->
-        
-        <div class="form">
-                <span class="type">가입 유형</span>
-                <div class="radio">
-                    <input type="radio" name="chk_type" value="2년형" checked="checked">2년형 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="radio" name="chk_type" value="3년형">3년형
-                </div>
-                <span class="date">가입 일자</span>
-                <input type="date" class="inputbox" placeholder="내체공 가입 일자"></div>
-                <span class="rounds">부금 회차</span>
-                <div class="number" >
-                    <input type="number" min="0" max="36" id="input-deposits" placeholder="현재까지 부금 회차수"/>
-                </div>
-        </div>
-        <div class="forgot" onclick="showForgotModal()">기억이 안난다면?
-            <a href="##" target="blank"></a>
-        </div>
-        <div class="button" onclick="location.href='loading.html'">
-            <img src="./image/submit.png" alt="" />
-        </div>
-    </div>
+        <div class="main">
+            <div class="maincopy">
+                <span class="v37_227">내일<br>채움<br>공제</span>
 
-    <!-- The Modal -->
+            </div>
+            <div class="woman">
+                <img src="./image/woman.png" alt="" />
+                <!-- <img class="woman" src="./image/woman.png" alt="" /> -->
+            </div>
+            
+        </div>
+        <div class="input">
+            <span class="v33_71">청년 내채공 해지시 환급금과<br>이자를 바로 확인해 보세요!</span>
+            <div class="form">
+                    <span class="type">가입 유형</span>
+                    <div class="radio">
+                        <input type="radio" name="chk_type" value="2년형" checked="checked">2년형 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="chk_type" value="3년형">3년형
+                    </div>
+                    <span class="date">가입 일자</span>
+                    <input type="date" class="inputbox" placeholder="내체공 가입 일자" min="2018-01-01" max="2021-12-31">
+                    <span class="rounds">부금 회차</span>
+                    <div class="number" >
+                        <input type="number" min="0" max="36" id="input-deposits" placeholder="현재까지 부금 회차수"/>
+                    </div>
+
+                    <div class="forgot" onclick="showForgotModal()">기억이 안난다면?
+                        <a href="##" target="blank"></a>
+                    </div>
+                    <div class="button" onclick="location.href='loading.html'">
+                        <img src="./image/submit.png" alt="" />
+                    </div>
+
+
+                    <!-- The Modal -->
     <div id="forgot-modal" class="modal">
-    <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close" onclick="offForgotModal()">&times;</span>
-      <span class="modal-number">방법 1</span>
-      <span class="modal-copy">카카오톡으로 확인하기</span>
-      <div class="modal-image">
-          <img src="./image/kakaotalk.png" alt="" />
-          <div class="modal-highlight"></div>
+        <!-- Modal content -->
+        <div class="modal-content">
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+            <!-- Next and previous buttons -->
+            <div style="height: 100%;">
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade" style="display: block;">
+            <span class="close" onclick="offForgotModal()">&times;</span>
+            <div>
+                <span class="modal-number">방법 1</span>
+                <span class="modal-copy">카카오톡으로 확인하기</span>
+                <!-- <div class="numbertext">1 / 3</div> -->
+                <img class="modal-image" src="./image/kakaotalk.png" alt="" style="width:100%"/>
+                <div class="modal-highlight_1"></div>
+            </div>
+            </div>
+        
+            <div class="mySlides fade">
+            <span class="close" onclick="offForgotModal()">&times;</span>
+            <div>
+                <span class="modal-number">방법 2</span>
+                <span class="modal-copy">메세지에서 확인하기</span>
+                <!-- <div class="numbertext">2 / 3</div> -->
+                <img class="modal-image" src="./image/message.png" alt="" style="width:100%">
+                <div class="modal-highlight_2"></div>
+                <!-- <div class="text">Caption Two</div> -->
+            </div>
+            </div>
+        
+            <div class="mySlides fade">
+            <span class="close" onclick="offForgotModal()">&times;</span>
+            <div>
+                <span class="modal-number">방법 3</span>
+                <span class="modal-copy">청약 승인 메일에서 확인하기</span>
+                <!-- <div class="numbertext">3 / 3</div> -->
+                <img class="modal-image" src="./image/email.png" alt="" style="width:100%">
+                <div class="modal-highlight_3"></div>
+                <!-- <div class="text">Caption Three</div> -->
+            </div>
+            </div>
+        
+    
+    
+        </div>
+        <br>
+        <!-- The dots/circles -->
+        <div class="slide-button" style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    
+          <!-- <span class="close" onclick="offForgotModal()">&times;</span>
+          <span class="modal-number">방법 1</span>
+          <span class="modal-copy">카카오톡으로 확인하기</span>
+          <div class="modal-image">
+              <img src="./image/kakaotalk.png" alt="" />
+              <div class="modal-highlight_1"></div>
+          </div>
+          <span class="modal-description">(청년)내일채움공제 대화방에서<br>부금 회차수 확인 </span> -->
+    
+        </div>
+      
       </div>
-      <span class="modal-description">(청년)내일채움공제 대화방에서<br>부금 회차수 확인 </span>
-    </div>
-  
-  </div>
+
+
+
+            </div>
+<!-- 
+            </div>
+        </div> -->
+        
+    <!-- </div> -->
+
+    
 </body>
 </html>

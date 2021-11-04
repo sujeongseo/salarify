@@ -7,9 +7,36 @@
     <link href="https://fonts.googleapis.com/css?family=NanumSquareOTF&display=swap" rel="stylesheet" />
     <link href="./style.css" rel="stylesheet" />
     <title>오늘 해지시 환급금</title>
+    <script>
+        function copyToClipboard(val) {
+        var t = document.createElement("textarea");
+        document.body.appendChild(t);
+        t.value = val;
+        t.select();
+        document.execCommand('copy');
+        document.body.removeChild(t);
+        }
+    
+        $('#copybtn1').click(function() {
+          copyToClipboard('https://www.salarify.kr');
+          alert('주소를 복사하였습니다');
+        });
+    </script>
 </head>
 <body>
     <div class="v33_35">
+        <div class="heading">
+            <div class="back">
+                <img src="./image/orange-2.png" alt=""/>
+            </div>
+            <div class="front">
+                <img src="./image/orange-1.png" alt=""/>
+            </div>
+        </div>
+        <span class="result">내채공 만기까지</span>
+        <span class="left-date">312일</span>
+        <div class="space">
+        </div>
         <div class="pop">
             <img src="./image/pop.png" alt="" />
         </div>
@@ -62,13 +89,20 @@
         <span class="content_4">꼭 이직해야 겠다면 내채공을 포기할만한<br>가치가 있는지 확인하세요.</span>
         <span class="estimated">예상 금액이므로 실제 정산 금액은 시점에 따라 달라질 수 있습니다.</span>
         <div class="tryagain">
-            <img src="./image/tryagain.png" alt="" />
+            <a href="./landing.html">
+                <img src="./image/tryagain.png" alt="" />
+            </a>
         </div>
-        <div class="share">
+        <button class="share" id="copybtn1" onclick="copyToClipboard('https://www.salarify.kr');" title="공유하기">
             <img src="./image/share.png" alt="" />
-        </div>
+        </button>
         <div class="logo">
             <img src="./image/logo.png" alt="" />
+        </div>
+        <div class="info">
+            <a href="http://www.salarify.kr">
+                <img src="./image/info.png" alt="" />
+            </a>
         </div>
     </div>
 </body>
